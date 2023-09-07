@@ -1,3 +1,4 @@
-deta==1.1.0
-python-dotenv==0.21.1
-slack-sdk==3.19.5
+fastapi==0.97.0
+python-dotenv==1.0.0
+slack-sdk==3.21.3
+uvicorn==0.22.0

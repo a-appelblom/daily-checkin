@@ -1,0 +1,20 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: daily-checkin
+    src: ./
+    engine: python3.9
+    primary: true
+    run: uvicorn main:app
+    presets:
+      env: 
+        - name: BOT_TOKEN
+          description: The bot token
+        - name: CHANNEL_ID
+          description: The channel
+    actions:
+      - id: "send-message"
+        name: "Send message"
+        trigger: "schedule"
+        default_interval: "0 10 * * mon-fri"
+
